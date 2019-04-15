@@ -61,7 +61,7 @@ Kirby::plugin('hashandsalt/video', [
 
           $width      = $tag->width;
           $height     = $tag->height;
-          $height     = $tag->preload;
+          $preload     = $tag->preload;
           $controls   = $tag->controls;
 
           // Set some defaults
