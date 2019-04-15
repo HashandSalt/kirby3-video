@@ -1,1 +1,73 @@
-Kirby3 Video
+# Kirby Video: Embed HTML5 Videos
+
+A Kirby tag and snippet for rendering video players inside textareas
+
+****
+
+## Commerical Usage
+
+This plugin is free but if you use it in a commercial project please consider to
+- [make a donation 🍻](https://paypal.me/hashandsalt?locale.x=en_GB) or
+- [buy a Kirby license using this affiliate link](https://a.paddle.com/v2/click/1129/36141?link=1170)
+
+****
+
+## How to use Video
+
+****
+
+## Installation
+
+### Download
+
+Download and copy this repository to `/site/plugins/kirby3-video`.
+
+### Composer
+
+```
+composer require hashandsalt/kirby-video
+```
+
+## Usage
+
+Minimal:
+
+```
+(video: yourfile.mp4 poster: yourposter.jpg)
+```
+
+You can set your own snippet to roll your own player code:
+
+```
+(video: yourfile.mp4 poster: yourposter.jpg snippet: yoursnippet)
+```
+
+Look inside the plugin folder for an example snippet.
+
+
+The following is available to you for use in the snippets:
+
+
+```php
+$video // file object for the video file
+$videourl // URL of the video file
+$poster // file object for the poster image file
+$posterurl // URL of the poster image file
+$width // Video Width
+$height // Video height
+$class // Container class
+$vidclass // Video tag class
+$preload // Preload attribute
+$caption // Set a caption for under the video
+$controls // Controls attribute
+$title // Video Title
+$alt // Poster Alt tag
+```
+
+## Known Issues
+
+The plugin makes us of `->file()` - be aware that this use the first image or first video on the page if the desired one is not found. This is by design.
+
+## License
+
+MIT
