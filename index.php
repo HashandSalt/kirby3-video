@@ -4,7 +4,7 @@
  *
  * HTML5 Video Tag Plugin for Kirby 3
  *
- * @version   0.0.1
+ * @version   0.0.2
  * @author    James Steel <https://hashandsalt.com>
  * @copyright James Steel <https://hashandsalt.com>
  * @link      https://github.com/HashandSalt/chopper
@@ -59,16 +59,16 @@ Kirby::plugin('hashandsalt/video', [
 
           if(empty($alt)) $alt = pathinfo($tag->video, PATHINFO_FILENAME);
 
+          $width      = $tag->width;
+          $height     = $tag->height;
+          $height     = $tag->preload;
+          $controls   = $tag->controls;
+
           // Set some defaults
-          if(!isset($tag->width))  $width    = 400;
-          if(!isset($tag->height)) $height   = 300;
-
-          if(!isset($preload))  $preload  = true;
-          if(!isset($controls)) $controls = true;
-
-          $preload  = ($preload)  ? 'preload' : '';
-          $controls = ($controls) ? 'controls' : '';
-
+          if(!isset($tag->width))  $width       = 400;
+          if(!isset($tag->height)) $height      = 300;
+          if(!isset($tag->preload))  $preload   = 'preload';
+          if(!isset($tag->controls)) $controls  = 'controls';
 
           $args = array(
             'video'     => $file,
