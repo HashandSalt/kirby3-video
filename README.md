@@ -12,10 +12,6 @@ This plugin is free but if you use it in a commercial project please consider to
 
 ****
 
-## How to use Video
-
-****
-
 ## Installation
 
 ### Download
@@ -25,7 +21,7 @@ Download and copy this repository to `/site/plugins/kirby3-video`.
 ### Composer
 
 ```
-composer require hashandsalt/kirby-video
+composer require hashandsalt/kirby3-video
 ```
 
 ## Usage
@@ -66,7 +62,7 @@ $alt // Poster Alt tag
 
 ## Known Issues
 
-The plugin makes us of `->file()` - be aware that this use the first image or first video on the page if the desired one is not found. This is by design.
+The plugin makes use of `->file()` - be aware that this uses the first image or first video on the page if the desired one is not found. This is by design.
 
 ## License
 
