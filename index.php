@@ -4,7 +4,7 @@
  *
  * HTML5 Video Tag Plugin for Kirby 3
  *
- * @version   0.0.2
+ * @version   0.0.4
  * @author    James Steel <https://hashandsalt.com>
  * @copyright James Steel <https://hashandsalt.com>
  * @link      https://github.com/HashandSalt/chopper
@@ -19,7 +19,7 @@ Kirby::plugin('hashandsalt/video', [
   ],
 
   'tags' => [
-      'video' => [
+      'vidembed' => [
         'attr' => [
           'width',
           'height',
@@ -61,7 +61,7 @@ Kirby::plugin('hashandsalt/video', [
 
           $width      = $tag->width;
           $height     = $tag->height;
-          $preload     = $tag->preload;
+          $preload    = $tag->preload;
           $controls   = $tag->controls;
 
           // Set some defaults
