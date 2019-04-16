@@ -29,13 +29,13 @@ composer require hashandsalt/kirby3-video
 Minimal:
 
 ```
-(video: yourfile.mp4 poster: yourposter.jpg)
+(vidembed: yourfile.mp4 poster: yourposter.jpg)
 ```
 
 You can set your own snippet to roll your own player code:
 
 ```
-(video: yourfile.mp4 poster: yourposter.jpg snippet: yoursnippet)
+(vidembed: yourfile.mp4 poster: yourposter.jpg snippet: yoursnippet)
 ```
 
 Look inside the plugin folder for an example snippet.
