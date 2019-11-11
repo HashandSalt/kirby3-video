@@ -39,6 +39,7 @@ Kirby::plugin('hashandsalt/video', [
 
           $file         = $tag->parent()->file($tag->value);
           $fileurl      = $file ? $file->url() : '';
+          $filemime     = $file ? $file->mime() : '';
 
           $poster       = $tag->parent()->file($tag->poster);
           $posterurl    = $poster ? $poster->url() : '';
@@ -83,7 +84,8 @@ Kirby::plugin('hashandsalt/video', [
             'caption'   => $caption,
             'controls'  => $controls,
             'title'     => $title,
-            'alt'       => $alt
+            'alt'       => $alt,
+            'mime'      => $filemime
 
           );
 
