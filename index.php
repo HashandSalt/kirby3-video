@@ -37,11 +37,11 @@ Kirby::plugin('hashandsalt/video', [
 
           $caption      = $tag->caption;
 
-          $file         = $tag->parent()->file($tag->video);
+          $file         = $tag->parent()->file($tag->value);
           $fileurl      = $file ? $file->url() : '';
 
           $poster       = $tag->parent()->file($tag->poster);
-          $posterurl    = $poster ? $poster ->url() : '';
+          $posterurl    = $poster ? $poster->url() : '';
 
           $snip         = $tag->snippet;
 
