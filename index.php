@@ -88,7 +88,7 @@ Kirby::plugin('hashandsalt/video', [
           );
 
           $snippet  = ($snip) ? $snip : 'html5video';
-          $video = snippet($snippet, $args, false);
+          $video = snippet($snippet, $args, true);
 
           return $video;
         }
