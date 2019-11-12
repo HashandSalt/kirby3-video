@@ -4,7 +4,7 @@
  *
  * HTML5 Video Tag Plugin for Kirby 3
  *
- * @version   0.0.4
+ * @version   0.0.8
  * @author    James Steel <https://hashandsalt.com>
  * @copyright James Steel <https://hashandsalt.com>
  * @link      https://github.com/HashandSalt/chopper
@@ -40,6 +40,8 @@ Kirby::plugin('hashandsalt/video', [
           $file         = $tag->parent()->file($tag->value);
           $fileurl      = $file ? $file->url() : '';
           $filemime     = $file ? $file->mime() : '';
+          $filemod      = $file ? $file->modified('%d/%m/%Y', 'strftime') : '';
+
 
           $poster       = $tag->parent()->file($tag->poster);
           $posterurl    = $poster ? $poster->url() : '';
@@ -85,7 +87,8 @@ Kirby::plugin('hashandsalt/video', [
             'controls'  => $controls,
             'title'     => $title,
             'alt'       => $alt,
-            'mime'      => $filemime
+            'mime'      => $filemime,
+            'modified'  => $filemod
 
           );
 
