@@ -3,7 +3,7 @@
 @include_once __DIR__ . '../../../vendor/autoload.php';
 
 return [
-    'tags' => [
+ 
         'vidembed' => [
             'attr' => [
               'width',
@@ -83,6 +83,6 @@ return [
               return $video;
             }
           ]
-    ]
+  
 
 ];

@@ -31,7 +31,13 @@ App::plugin('hashandsalt/video', [
 // -----------------------------------------------------------------------------
 App::plugin('hashandsalt/videoblock', [
   'plugin'  => require __DIR__ . '/blocks/localvideo/index.php',
+  
   'blueprints' => [
     'blocks/localvideo' => __DIR__ . '/blocks/localvideo/localvideo.yml',
   ],
+  
+  'snippets' => [
+    'blocks/localvideo'    => __DIR__ . '/blocks/localvideo/localvideo.php'
+  ]
+
 ]);

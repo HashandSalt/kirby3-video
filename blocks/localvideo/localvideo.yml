@@ -9,6 +9,3 @@ fields:
     label: Poster
     type: files
     width: 1/2
-  description:
-    label: Description
-    type: textarea
