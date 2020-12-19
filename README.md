@@ -1,6 +1,6 @@
-# Kirby Video: Embed HTML5 Videos
+# Kirby Video: Embed HTML5 Video
 
-A Kirby tag and snippet for rendering video players inside textareas
+A Kirby tag and snippet for rendering video players inside textareas, and a custom block for use with the new Editor field (Kirby 3.5 required).
 
 ****
 
@@ -59,6 +59,12 @@ $controls // Controls attribute
 $title // Video Title
 $alt // Poster Alt tag
 ```
+
+## Editor Block
+
+The plugin now includes and editor block (Kirby 3.5+ Required).
+
+Add `-localvideo` to your list of blocks to use it.
 
 ## Known Issues
 

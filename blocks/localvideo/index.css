@@ -1,0 +1,17 @@
+.k-block-type-localvideo {
+    width: 100%;
+    background-color: #000;
+    line-height: 0;
+}
+
+.k-block-type-localvideo video {
+    width: 100%;
+    height: auto;
+}
+
+.k-block-type-localvideo .localvideo-preview {
+position: absolute;
+width: 100%;
+height: 100%;
+}
+

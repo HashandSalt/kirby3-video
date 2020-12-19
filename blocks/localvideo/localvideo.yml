@@ -1,0 +1,48 @@
+name: Local Video
+icon: video
+tabs:
+  source:
+    fields:
+      vidfile:
+        label: Video
+        type: files
+        width: 1/2
+      vidposter:
+        label: Poster
+        type: files
+        width: 1/2
+  settings:
+    fields:
+      class:
+        label: Class
+        type: text
+        width: 1/3
+      controls:
+        label: Controls
+        type: toggle
+        width: 1/3
+      mute:
+        label: Mute
+        type: toggle
+        width: 1/3
+      autoplay:
+        label: Autoplay
+        type: toggle
+        width: 1/3
+      loop:
+        label: Loop
+        type: toggle
+        width: 1/3
+      playsinline:
+        label: Playsinline
+        type: toggle
+        width: 1/3
+      preload:
+        label: Preload
+        type: select
+        width: 1/3
+        default: metadata
+        options:
+          none: None
+          metadata: Metadata
+          auto: Auto
