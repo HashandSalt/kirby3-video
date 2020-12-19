@@ -16,16 +16,3 @@ $player = Html::tag('figure', [$vidtag], ['class' => $class]);
 
 <!-- Video Player -->
 <?= $player ?>
-
-<script type="application/ld+json">
-{
-  "@context": "http://schema.org",
-  "@type": "VideoObject",
-  "name": "<?= $title ?>",
-  "description": "<?= $caption ?>",
-  "thumbnailUrl": "<?= $posterurl ?>",
-  "contentUrl": "<?= $videourl ?>",
-  "uploadDate": "<?= $modified ?>"
-}
-</script>
-<!-- / Video Player -->
