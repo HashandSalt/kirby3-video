@@ -5,16 +5,17 @@
 $vidfile = $block->vidfile()->tofile();
 $posterfile = $block->vidposter()->tofile();
 
+
 // Video Contols
 $vidoptions = [
-    'poster' => $posterfile->url(),
-    'class'  => 'videosrc',
-    'preload'  => 'metadata',
-    'controls'  => true,
-    'playsinline' => true,
-    'autoplay'  => true,
-    'muted'  => true,
-    'loop'  => true,
+    'poster'        => $posterfile->url(),
+    'class'         => 'videosrc',
+    'preload'       => 'metadata',
+    'controls'      => $block->controls()->toBool() ? 'true' : null,
+    'playsinline'   => $block->playsinline()->toBool() ? 'true' : null,
+    'autoplay'      => $block->autoplay()->toBool() ? 'true' : null,
+    'muted'         => $block->mute()->toBool() ? 'true' : null,
+    'loop'          => $block->loop()->toBool() ? 'true' : null
 ];
 
 
