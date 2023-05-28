@@ -8,7 +8,7 @@ $posterfile = $block->vidposter()->tofile();
 
 // Video Contols
 $vidoptions = [
-    'poster'        => $posterfile->url(),
+    'poster'        => $posterfile ? $posterfile->url() : null, 
     'class'         => 'videosrc',
     'preload'       => 'metadata',
     'controls'      => $block->controls()->toBool() ? 'true' : null,
@@ -19,7 +19,7 @@ $vidoptions = [
 ];
 
 
-$posterimage = Html::tag('img', null, ['src' => $posterfile->url() ]);
+$posterimage = Html::tag('img', null, ['src' => ($posterfile) ? $posterfile->url() : null  ]);
 
 $videsourcetag = Html::tag('source', null, ['src' => $vidfile->url(), 'type' => $vidfile->mime() ]);
 $videsourcetag .= Html::tag('a', [$posterimage], ['href' => $vidfile->url() ]);
@@ -29,13 +29,3 @@ $player = Html::tag('figure', [$vidtag], ['class' => 'video']);
 echo $player;
 
 ?>
-
-
-
-
-
-
-
-
-
-
