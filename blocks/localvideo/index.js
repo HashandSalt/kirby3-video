@@ -10,7 +10,7 @@ panel.plugin("woo/localvideo", {
         <div @click="open">          
           <video v-if="video" autoplay muted loop>
             <source :src="video" type="video/mp4">
-            <p>Your Browser does not support video<?p>
+            <p>Your Browser does not support video</p>
           </video>
           <div v-else>No video selected yet</div>
         </div> 
