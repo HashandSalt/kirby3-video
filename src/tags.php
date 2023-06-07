@@ -45,7 +45,7 @@ return [
                 }
               }
     
-              if(empty($alt)) $alt = pathinfo($tag->video, PATHINFO_FILENAME);
+              if(empty($alt)) $alt = $file->name();
     
               $width      = $tag->width;
               $height     = $tag->height;
