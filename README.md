@@ -56,6 +56,9 @@ $vidclass // Video tag class
 $preload // Preload attribute
 $caption // Set a caption for under the video
 $controls // Controls attribute
+$autoplay // Autoplay attribute (automatically sets muted to true)
+$loop // Loop attribute
+$playsinline // Playsinline attribute (for mobile clients)
 $title // Video Title
 $alt // Poster Alt tag
 ```
