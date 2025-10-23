@@ -6,17 +6,20 @@ return [
  
         'vidembed' => [
             'attr' => [
-              'width',
-              'height',
-              'poster',
+              'autoplay',
               'caption',
-              'title',
+              'caption',
               'class',
-              'vidclass',
-              'caption',
-              'preload',
               'controls',
-              'snippet'
+              'height',
+              'loop',
+              'playsinline',
+              'poster',
+              'preload',
+              'snippet',
+              'title',
+              'vidclass',
+              'width',
             ],
             'html' => function($tag) {
     
@@ -47,34 +50,44 @@ return [
     
               if(empty($alt)) $alt = $file->name();
     
-              $width      = $tag->width;
-              $height     = $tag->height;
-              $preload    = $tag->preload;
-              $controls   = $tag->controls;
+              $width       = $tag->width;
+              $height      = $tag->height;
+              $preload     = $tag->preload;
+              $controls    = $tag->controls;
+              $playsinline = $tag->playsinline;
+              $autoplay    = $tag->autoplay || false;
+              $muted       = $tag->autoplay || false;
+              $loop        = $tag->loop || false;
     
               // Set some defaults
               if(!isset($tag->width))  $width       = 400;
               if(!isset($tag->height)) $height      = 300;
               if(!isset($tag->preload))  $preload   = 'preload';
-              if(!isset($tag->controls)) $controls  = 'controls';
+              if(!isset($tag->controls)) $controls  = true;
+              if(!isset($tag->playsinline)) $playsinline  = true;
+              $controls   = filter_var($controls, FILTER_VALIDATE_BOOLEAN);
+              $playsinline   = filter_var($playsinline, FILTER_VALIDATE_BOOLEAN);
     
               $args = array(
-                'video'     => $file,
-                'videourl'  => $fileurl,
-                'poster'    => $poster,
-                'posterurl' => $posterurl,
-                'width'     => $width,
-                'height'    => $height,
-                'class'     => $tag->class,
-                'vidclass'  => $tag->vidclass,
-                'preload'   => $preload,
-                'caption'   => $caption,
-                'controls'  => $controls,
-                'title'     => $title,
-                'alt'       => $alt,
-                'mime'      => $filemime,
-                'modified'  => $filemod
-    
+                'alt'         => $alt,
+                'autoplay'    => $autoplay,
+                'caption'     => $caption,
+                'class'       => $tag->class,
+                'controls'    => $controls,
+                'height'      => $height,
+                'loop'        => $loop,
+                'mime'        => $filemime,
+                'modified'    => $filemod,
+                'muted'       => $muted,
+                'playsinline' => $playsinline,
+                'poster'      => $poster,
+                'posterurl'   => $posterurl,
+                'preload'     => $preload,
+                'title'       => $title,
+                'vidclass'    => $tag->vidclass,
+                'video'       => $file,
+                'videourl'    => $fileurl,
+                'width'       => $width,
               );
     
               $snippet  = ($snip) ? $snip : 'html5video';

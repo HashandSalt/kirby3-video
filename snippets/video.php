@@ -2,7 +2,7 @@
 $posterimage = Html::tag('img', null, ['src' => $posterurl, 'alt' => $alt]);
 $videsourcetag = Html::tag('source', null, ['src' => $videourl, 'type' => $mime]);
 $videsourcetag .= Html::tag('a', [$posterimage], ['href' => $videourl]);
-$vidtag = Html::tag('video', [$videsourcetag], ['poster' => $posterurl, 'width' => $width, 'height' => $height, 'controls' => $controls, 'preload' => $preload, 'class' => $vidclass]);
+$vidtag = Html::tag('video', [$videsourcetag], ['poster' => $posterurl, 'width' => $width, 'height' => $height, 'controls' => $controls, 'preload' => $preload, 'class' => $vidclass, 'muted' => $muted, 'autoplay' => $autoplay, 'loop' => $loop, 'playsinline' => $playsinline]);
 
 if($caption) {
   $cap = Html::tag('figcaption', [$caption]);
